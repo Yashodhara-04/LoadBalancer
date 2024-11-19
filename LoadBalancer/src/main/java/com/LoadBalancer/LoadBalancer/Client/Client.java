@@ -36,6 +36,7 @@ public class Client {
             Server server2 = new Server(2, "SERVER2", true, 8082, "/ping/server2");
             List<Server> serverList = Arrays.asList(server1, server2);
             loadBalancerService = new LoadBalancerService(serverList);
+            loadBalancerService.checkHealth();
             loadBalancerService.addServer(serverList);
         }
         catch (Exception ex)

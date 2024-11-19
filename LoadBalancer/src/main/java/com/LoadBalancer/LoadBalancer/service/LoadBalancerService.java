@@ -45,7 +45,6 @@ public class LoadBalancerService {
         try {
             String url = "http://localhost:" + server.getPort() + server.getAddress() + "/get";
             Server currServer = restTemplate.getForObject(url, Server.class);
-            checkHealth(currServer);
             return currServer;
         }
         catch (Exception ex)
@@ -55,7 +54,7 @@ public class LoadBalancerService {
         }
     }
 
-    public void checkHealth(Server currServer)
+    public void checkHealth()
     {
         servers.removeIf(server ->
         {

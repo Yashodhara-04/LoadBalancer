@@ -1,6 +1,6 @@
 # Load Balancer
  
-Implemented a Load Balancer project to deepen my understanding of distributed system design and improve my skills in building scalable Spring Boot applications.
+Implemented a Load Balancer project to deepen my understanding on distributed system design and improve my skills in building scalable Spring Boot applications.
 
 ## Table of Contents
 
@@ -46,6 +46,7 @@ Designed a Load Balancer project to distribute incoming requests across multiple
 **2. Run Load Balancer**
   - Once the servers are up and running run the Load Balancer application. You can see the output in the console.
 
+    ![_](https://github.com/user-attachments/assets/c1338ab9-5deb-4514-9e3f-ce218c8238a0)
 
 ## Getting Started
 

@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,10 +35,10 @@ public class Client {
         try {
             Server server1 = new Server(1, "SERVER1", true, 8081, "/ping/server1");
             Server server2 = new Server(2, "SERVER2", true, 8082, "/ping/server2");
-            List<Server> serverList = Arrays.asList(server1, server2);
+            List<Server> serverList =  new ArrayList<>(Arrays.asList(server1, server2));
             loadBalancerService = new LoadBalancerService(serverList);
             loadBalancerService.checkHealth();
-            loadBalancerService.addServer(serverList);
+            loadBalancerService.addServer();
         }
         catch (Exception ex)
         {

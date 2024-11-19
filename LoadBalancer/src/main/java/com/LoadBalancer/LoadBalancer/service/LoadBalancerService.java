@@ -24,10 +24,10 @@ public class LoadBalancerService {
         this.servers = serverList;
     }
 
-    public void addServer(List<Server> serverList) throws Exception
+    public void addServer() throws Exception
     {
         try {
-            for(Server server : serverList)
+            for(Server server : servers)
             {
                 String url = "http://localhost:" + server.getPort() + server.getAddress() + "/add";
                 restTemplate.postForObject(url, server, Server.class);
